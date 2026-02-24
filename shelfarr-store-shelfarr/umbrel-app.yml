@@ -2,16 +2,25 @@ manifestVersion: 1
 id: shelfarr-store-shelfarr
 name: Shelfarr
 tagline: Ebook & Audiobook request management and acquisition
-category: Media
+category: media
 version: "latest"
 port: 5056
 description: >-
   Shelfarr fills the gap for book lovers that Jellyseerr/Sonarr fills for video.
   Discover books via Open Library, request them, and automatically acquire via
-  Prowlarr indexers and qBittorrent/SABnzbd. Also supports direct ebook
-  downloads via Anna's Archive. Integrates with Audiobookshelf for library
-  management. Features multi-user support with role-based access, two-factor
-  authentication (TOTP), and OIDC/SSO.
+  Prowlarr indexers and Transmission. Also supports direct ebook downloads via
+  Anna's Archive. Integrates with Audiobookshelf for library management.
+  Features multi-user support with role-based access, two-factor authentication
+  (TOTP), and OIDC/SSO.
+
+
+  After installing, configure connections inside Shelfarr's settings:
+
+  - Prowlarr: http://prowlarr_server_1:9696
+
+  - Transmission: http://transmission_server_1:9091
+
+  - Audiobookshelf: http://audiobookshelf_web_1:80
 developer: Pedro Revez Silva
 website: https://github.com/Pedro-Revez-Silva/shelfarr
 repo: https://github.com/Pedro-Revez-Silva/shelfarr
@@ -19,7 +28,8 @@ support: https://github.com/Pedro-Revez-Silva/shelfarr/issues
 gallery: []
 dependencies:
   - audiobookshelf
-  - qbittorrent
+  - prowlarr
+  - transmission
 path: ""
 defaultUsername: ""
 defaultPassword: ""
