@@ -13,13 +13,12 @@ services:
     volumes:
       # App data (database, generated secrets)
       - ${APP_DATA_DIR}/data:/rails/storage
-
-      # Shared with Audiobookshelf - must match its paths
-      - ${UMBREL_ROOT}/data/storage/downloads/audiobooks:/audiobooks
-      - ${UMBREL_ROOT}/data/storage/downloads/ebooks:/ebooks
-
-      # Shared with qBittorrent / SABnzbd completed downloads
-      - ${UMBREL_ROOT}/data/storage/downloads:/downloads
+      # Shared with Audiobookshelf (matches its audiobooks path)
+      - ${UMBREL_ROOT}/home/Downloads/audiobooks:/audiobooks
+      # Shared with Audiobookshelf (your books folder)
+      - ${UMBREL_ROOT}/home/Downloads/books:/ebooks
+      # Shared with Transmission (full downloads folder)
+      - ${UMBREL_ROOT}/home/Downloads:/downloads
     environment:
       PUID: "1000"
       PGID: "1000"
