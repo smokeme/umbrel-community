@@ -4,7 +4,7 @@ name: Shelfarr
 tagline: Ebook & Audiobook request management and acquisition
 category: media
 version: "latest"
-port: 5056
+port: 5057
 description: >-
   Shelfarr fills the gap for book lovers that Jellyseerr/Sonarr fills for video.
   Discover books via Open Library, request them, and automatically acquire via
